@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Gửi Bé Yêu 🌸</title>
+    <style>
+        :root {
+            --primary-pink: #ffafbd;
+            --soft-white: #fff9f9;
+            --text-color: #6d5d5d;
+            --accent-red: #ff758c;
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(180deg, #ffafbd 0%, #ffc3a0 100%);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Tối ưu cho Dynamic Island & Notch trên iPhone */
+        .safe-area {
+            padding-top: env(safe-area-inset-top);
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 430px; /* Chiều rộng chuẩn iPhone 16 Pro Max */
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px 20px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 10px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 25px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .image-container img {
+            width: 100%;
+            border-radius: 15px;
+            display: block;
+            margin: 10px 0;
+            object-fit: cover;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .video-container {
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            background: #000;
+            margin: 15px 0;
+            aspect-ratio: 16 / 9; /* Tỉ lệ video chuẩn */
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+        }
+
+        .message {
+            font-size: 1.1rem;
+            text-align: center;
+            color: #d84315;
+            font-weight: 500;
+        }
+
+        .care-tips {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .tip-item {
+            background: #fff;
+            padding: 10px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            text-align: center;
+            border: 1px solid #ffebee;
+        }
+
+        /* Hiệu ứng cánh hoa rơi */
+        .petal {
+            position: fixed;
+            top: -10%;
+            user-select: none;
+            pointer-events: none;
+            z-index: 999;
+            animation: fall linear forwards;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(110vh) rotate(360deg);
+            }
+        }
+
+        .floating-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--accent-red);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 20px rgba(255,117,140,0.4);
+            font-size: 24px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+
+<div class="safe-area">
+    <div class="container">
+        <header>
+            <h1>Dành cho Cục vk của anh 🌸</h1>
+            <p style="color: white;">Anh biết hôm nay em mệt...</p>
+        </header>
+
+        <div class="card">
+            <p class="message">"Nghỉ ngơi một chút nhé, ngày dâu cứ để a lo kkk" ❤️</p>
+            
+            <div class="image-container">
+                <img src="./img/Anh1.jpg" alt="Sweet Memory">
+            </div>
+        </div>
+
+        <div class="card">
+            <h3 style="margin-top: 0; color: var(--accent-red);">Hy vọng e vui đừng thấy căng thẳng hay áp lực nhé ❤️</h3>
+            <div class="video-container">
+                <video controls poster="https://via.placeholder.com/400x225?text=Video+tặng+em">
+                    <source src="img/7375237352876.mp4" type="video/mp4">
+                    Trình duyệt của em không hỗ trợ video.
+                </video>
+            </div>
+            <p style="font-size: 0.9rem; text-align: center; font-style: italic;">
+                (Bật loa lên để nghe lời anh muốn nói nhé)
+            </p>
+        </div>
+
+        <div class="card">
+            <h3 style="margin-top: 0; text-align: center;">Note nhỏ cho em:</h3>
+            <div class="care-tips">
+                <div class="tip-item">🍵 Uống nước ấm</div>
+                <div class="tip-item">🍫 Ăn chút socola</div>
+                <div class="tip-item">🛌 Ngủ sớm nhé</div>
+                <div class="tip-item">🧣 Giữ ấm bụng</div>
+            </div>
+        </div>
+
+        <footer style="text-align: center; color: white; font-size: 0.8rem; padding: 20px;">
+            Thương em thật nhiều! 🧸
+            Anh gửi ngàn cái ôm qua đây cho em đỡ đau bụng nhé! 🤗 👉👉👉👉👉👉👉👉👉👉
+        </footer>
+    </div>
+    <div id="customModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:9999; align-items:center; justify-content:center;">
+    <div style="background:white; padding:20px; border-radius:20px; width:80%; max-width:350px; text-align:center; position:relative;">
+        <span onclick="closeModal()" style="position:absolute; top:10px; right:15px; font-size:25px; cursor:pointer;">&times;</span>
+        
+        <img src="img/Anh.jpg" style="width:100%; border-radius:15px;">
+        
+        <p style="margin-top:15px; color:#6d5d5d; font-weight:500;">Anh gửi ngàn cái ôm qua đây cho em đỡ đau bụng nhé! 🤗</p>
+    </div>
+</div>
+</div>
+
+<div class="floating-button" onclick="spawnHeart()">❤️</div>
+
+<script>
+    // Hiệu ứng hoa rơi
+    function createPetal() {
+        const petal = document.createElement('div');
+        petal.classList.add('petal');
+        petal.innerHTML = '🌸';
+        petal.style.left = Math.random() * 100 + 'vw';
+        petal.style.fontSize = (Math.random() * 10 + 10) + 'px';
+        petal.style.animationDuration = (Math.random() * 3 + 2) + 's';
+        petal.style.opacity = Math.random();
+        document.body.appendChild(petal);
+        setTimeout(() => petal.remove(), 5000);
+    }
+    setInterval(createPetal, 300);
+
+    function spawnHeart() {
+    // Hiển thị hộp thoại thay vì alert
+    document.getElementById('customModal').style.display = 'flex';
+}
+
+function closeModal() {
+    // Đóng hộp thoại
+    document.getElementById('customModal').style.display = 'none';
+}
+
+// Đóng khi click ra ngoài hộp trắng
+window.onclick = function(event) {
+    let modal = document.getElementById('customModal');
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
